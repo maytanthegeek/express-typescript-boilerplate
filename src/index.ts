@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import pino from 'express-pino-logger';
 import bodyParser from 'body-parser';
+import SampleController from './sample-controller';
 
 dotenv.config();
 
@@ -36,6 +37,6 @@ class App {
 }
 
 const { PORT } = process.env;
-const app = new App([], PORT);
+const app = new App([new SampleController()], PORT);
 
 app.listen();
