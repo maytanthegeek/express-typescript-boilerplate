@@ -1,10 +1,9 @@
 FROM node:lts-alpine
-EXPOSE 3000
-WORKDIR /opt
+WORKDIR /usr/src/app
 
-ENV NODE_ENV=production
-ADD package.json .
+COPY package*.json ./
 RUN npm install
+COPY . .
 
-COPY ./dist .
+EXPOSE 3000
 CMD [ "npm", "start" ]

@@ -1,0 +1,8 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
+import * as shell from 'shelljs';
+
+shell.cp('-R', 'src/keys', 'dist/keys/');
+shell.cp('-R', 'src/public/js/lib', 'dist/public/js/');
+shell.cp('-R', 'src/public/fonts', 'dist/public/');
+shell.cp('-R', 'src/public/images', 'dist/public/');
+shell.cp('-R', 'src/public/views', 'dist/public/');

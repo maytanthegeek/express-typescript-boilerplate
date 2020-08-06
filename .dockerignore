@@ -1,0 +1,10 @@
+node_modules
+src
+
+# Files
+.env
+.eslintrc.yml
+Dockerfile
+copystaticAssets.ts
+npm-debug.log
+tsconfig.json
